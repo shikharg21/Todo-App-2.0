@@ -8,33 +8,26 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <link rel="stylesheet" href="style.css">
     <script src="app.js"></script>
 </head>
 
-<body>
+<body style="background-color:lightgreen">
 
     <div class="container" align="center">
-        <h1>ToDo List</h1>
-        <form action="/action_page.php">
-            <div class="input-group">
-                <input type="text" class="form-control" id="input" placeholder="Search" name="search">
-                <div class="input-group-btn">
-                    <button class="btn btn-default" type="submit" id="addbtn"><i
-                            class="glyphicon glyphicon-plus"></i></button>
-                    <button class="btn btn-default" type="submit" id="delbtn"><i
-                            class="glyphicon glyphicon-minus"></i></button>
-                </div>
+        <h1 style="font-family: Arial, Helvetica, sans-serif"><b>ToDo List<b></h1>
+        <div class="input-group">
+            <input type="text" class="form-control" id="input" placeholder="Search" name="search">
+            <div class="input-group-btn">
+                <button class="btn btn-default" type="submit" id="addbtn"><i
+                        class="glyphicon glyphicon-plus"></i></button>
+                <button class="btn btn-default" type="submit" id="delbtn"><i
+                        class="glyphicon glyphicon-minus"></i></button>
             </div>
-        </form>
-        <ul class="list-group" id="list" style="text-align:left">
-            <li class="list-group-item">New </li>
-            <li class="list-group-item">Deleted </li>
-            <li class="list-group-item">Warnings </li>
+        </div>
+        <ul class="list-group list-group-flush" id="list" style="text-align:left">
         </ul>
-
     </div>
-
 </body>
 
 </html>
