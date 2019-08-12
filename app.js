@@ -2,7 +2,6 @@ $(() => {
 
     let list = $('#list')
     let input = $('#input')
-    let li = $('li')
 
     $('#addbtn').click(() => {
         let val = input.val()
