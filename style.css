@@ -1,3 +1,8 @@
 li:hover{
     background-color:lightblue;
 }
+
+.taken{
+    background-color:lightblue;
+    text-decoration:line-through
+}

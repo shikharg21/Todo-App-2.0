@@ -1,20 +1,24 @@
 $(() => {
 
     let list = $('#list')
+    let input = $('#input')
+    let li = $('li')
 
     $('#addbtn').click(() => {
-        let input = $('#input').val()
-        list.append(`<li class="list-group-item">${input}</li>`)
+        let val = input.val()
+        list.append(`<li class='list-group-item'>${val}</li>`)
+        input.val('')
     })
 
     list.click((event) => {
-        event.target.setAttribute('style', "background-color:lightblue;text-decoration:line-through")
-        event.target.setAttribute('class', "list-group-item taken")
-    })
+        let val = event.target.getAttribute('class')
 
-    // $('.list-group-item.taken').click(() => {
-    //     console.log('clicked')
-    // })
+        if (val == 'list-group-item taken') {
+            event.target.setAttribute('class', 'list-group-item')
+        } else {
+            event.target.setAttribute('class', 'list-group-item taken')
+        }
+    });
 
     $('#delbtn').click(() => {
         $('.taken').remove()
