@@ -5,7 +5,11 @@ $(() => {
 
     $('#addbtn').click(() => {
         let val = input.val()
-        list.append(`<li class='list-group-item'>${val}</li>`)
+        if (val == '') {
+            alert('Please Enter a Task')
+        } else {
+            list.append(`<li class='list-group-item'>${val}</li>`)
+        }
         input.val('')
     })
 
