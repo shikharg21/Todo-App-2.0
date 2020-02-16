@@ -12,7 +12,7 @@ $(() => {
         }
         input.val('')
     })
-
+}
     list.click((event) => {
         let val = event.target.getAttribute('class')
 
