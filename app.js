@@ -1,5 +1,6 @@
 $(() => {
 
+    
     let list = $('#list')
     let input = $('#input')
 
@@ -12,7 +13,6 @@ $(() => {
         }
         input.val('')
     })
-}
     list.click((event) => {
         let val = event.target.getAttribute('class')
 
@@ -27,4 +27,13 @@ $(() => {
         $('.taken').remove()
     })
 
+
+    $('#pdfbtn').click(() => {
+
+        var doc = new jsPDF();
+        doc.text('Tasks', 100, 20)
+        doc.fromHTML($('#list').html(),20,20)
+        doc.save('myTodo.pdf')
+        
+    })
 })
