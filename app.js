@@ -31,7 +31,7 @@ $(() => {
     $('#pdfbtn').click(() => {
 
         var doc = new jsPDF();
-        doc.text('Tasks', 100, 20)
+        doc.text('TODO LIST', 100, 20)
         doc.fromHTML($('#list').html(),20,20)
         doc.save('myTodo.pdf')
         
